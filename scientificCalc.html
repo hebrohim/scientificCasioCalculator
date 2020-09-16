@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scientificCalculator</title>
+
+	<link href="https://fonts.googleeapis.com/css2?family=kumar+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+
+
+	<style type="text/css">
+	body{
+		background-color: rgba(112, 112, 112, 0.425);
+		box-sizing: border-box;
+	}
+
+
+		.first{
+			background-color: rgb(193,194,199);
+			width :308px;
+			height: 643px;
+			margin: auto;
+			clip-path: polygon(0% 0%,100% 0%,100% 35%,97.4% 59%,99% 75%,99% 79%,99% 100%,1% 100%,1% 79%,1% 75%,2.6% 59%,0% 35%);
+			border-bottom-left-radius: 95px;
+			border-bottom-right-radius: 95px;
+			border-top-left-radius: 50px;
+			border-top-right-radius: 50px;
+			position: relative;
+			top: 4px;
+			
+			
+			
+			
+		}
+
+		.second{
+			width: 320px;
+			height: 650px;
+			margin: auto;
+			background-color: rgb(99,88,122);
+			border-bottom-left-radius: 90px;
+			border-bottom-right-radius: 90px;
+			border-top-left-radius: 50px;
+			border-top-right-radius: 50px;
+			box-shadow: 5px 5px 10px grey;
+			
+
+		}
+
+
+		
+
+
+		.calinfo{
+			width: 90%;
+			margin: auto;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+		}
+
+
+		#solar{
+			width: 120px;
+			height: 50px;
+			background-color: rgb(80, 55, 50);
+			border-radius: 10px;
+			border: 3px groove rgb(193,194,199);
+
+		}
+
+		#solarpanel {
+			height: 85%;
+			width: 100%;
+		}
+
+		#twoway {
+			width: 100%;
+			height: 13%;
+			font-size: 0.8em;
+		}
+
+		#calname{
+			font-family:Impact;
+			color: rgb(46, 48, 47);
+			width: 100%;
+			font-size: 20px;
+			letter-spacing: 1px;
+				}
+
+				#fx{
+					
+					top: 40px;
+					font-family:'Times New Roman', Times, serif;
+					font-style: italic;
+					font-size: 16px;
+					left: 25px;
+					color: rgb(67, 69, 68);
+				}
+
+				#twoway{
+					font-size:0.em;
+					padding-left:35px;
+				}
+			#natural{
+				
+				top: 65px;
+				left: 10px;
+				font-family:Cooper Black;
+				font-style: italic;	
+				color: rgb(0, 137, 123);
+				font-size: 12px;
+		
+			}
+
+			#screen{
+				font-family: 'kumar One' ,cursive;
+				box-sizing: border-box;
+				margin:0 20px 0;
+				width: 255px;
+				background-color:rgb(219, 231, 219);
+				height:90px;
+				border-radius: 9px;
+				border: 3px groove rgb(3, 100, 90);
+				font-size:1.5em;
+				text-align:center;
+				color: #2C3053;
+				padding:10px 0 0 10px;
+				text-align:left;
+
+			}
+			table{
+				font-size: 0.8em;
+			}
+
+			.buttons #button{
+			font-family:arial;
+			color: white;
+			width:34px;
+			height: 16px;
+			border-radius: 7px 7px 12px 12px;
+			background-color: #354040 ;
+			border:1px groove #293131;
+			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.815);
+			margin: 0px 5px 0px 2px;
+				
+			
+		}
+
+		.buttons #button2{
+			font-family:arial;
+			color: white;
+			width:44px;
+			height: 24px;
+			border-radius: 7px 7px 15px 15px;
+			background-color: #354040 ;
+			border:1px groove #293131;
+			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.815);
+			margin: 0px 7px 0px 2px;
+				
+			
+		}
+
+		tr td button{
+			font-size: 0.7em;
+		}
+
+		table{
+			margin-left: 5px;
+			
+		}
+
+		button:focus{
+			outline: none;
+		
+
+		}
+		button:hover{
+			cursor: pointer;
+		}
+
+		#circle{
+			position: absolute;
+			top: 230px;
+			text-align: center;
+			width: 60px;
+			height: 60px;
+			border-radius: 70px;
+			background-color: rgb(99,88,122);
+			border: 3px groove rgb(99,88,122);
+			
+		}
+		
+
+	.secondButton #button2{
+		background-color:white;
+		color: #354040;
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+
+
+	#off, #ins{
+			font-family:arial;
+			font-size: 1.2em;
+			font-weight: bold;
+			color: #354040;
+			width:44px;
+			height: 24px;
+			border-radius: 7px 7px 15px 15px;
+			background-color: #ed9f56dc;
+			border:1px groove #885c3371;
+			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.815);
+			margin: 0px 7px 0px 2px;
+				
+		
+	}
+
+	
+	</style>
+</head>
+<body>
+
+	
+		<section class="second">
+			<section class="first">
+					
+				
+					<section class="calinfo">
+						<div id="text">
+							<p id="calname">EXQUISITE</p>
+							<p id="fx">fx-115ES PLUS</p>
+							<p id="natural">NATURAL-V.P.A.M</p>
+						</div>
+					
+						<div id="solar">
+							<div id="solarpanel">
+								<div id="solarline1"></div>
+								<div id="solarline2"></div>
+								<div id="solarline3"></div>
+							</div>
+							<p id="twoway"> TWO WAY POWER </p>
+						 </div>
+					
+						</section>
+				
+					<div id="screen"><!-- add an inline style for this tag align to center -->
+							
+					</div>
+
+				
+
+					 <section class="buttons">
+						 <table>
+							<tr>
+							
+								<td><div style="text-align:center;">solve =</div><button id = "button" onclick="displayButton()">CALC</button></td>
+								<td><div style="text-align:center;">o</div><button id = "button" onclick="displayButton()">o</button></td>
+								<td><div style="text-align:center;" id="circle"><span>Replay</span></div><!-- <button id = "buttonCircle" onclick="displayButton()"></button> --></td>
+								<td><div style="text-align:center;">o</div><button id = "button" onclick="displayButton()">o</button></td>
+								<td><div style="text-align:center;">o</div><button id = "button" onclick="displayButton()">o</button></td>
+							</tr>
+
+							<tr>
+							
+								<td><div style="text-align:center;">solve =</div><button id = "button" onclick="displayButton()">CALC</button></td>
+								<td><div style="text-align:center;">o</div><button id = "button" onclick="displayButton()">o</button></td>
+								<!-- <td><div style="text-align:center;" id="empty"></div><button id = "buttonCircle" onclick="displayButton()"></button>
+								</td> -->
+								<td><div style="text-align:center;">o</div><button id = "button" onclick="displayButton()">o</button></td>
+								<td><div style="text-align:center;">o</div><button id = "button" onclick="displayButton()">o</button></td>
+							</tr>
+							</table>
+						<table style="margin-left: 12px;">
+							
+							
+
+
+						<!-- 	<tr>
+							
+									<td><div style="text-align:center;">solve =</div><button id = "button" onclick="displayButton()">CALC</button></td>
+									<td><div style="text-align:center;">o</div><button id = "button" onclick="displayButton()">o</button></td>
+									<td><div style="text-align:center;">o</div><button id = "button" onclick="displayButton()">o</button></td>
+									<td><div style="text-align:center;">o</div><button id = "button" onclick="displayButton()">o</button></td>
+							</tr> -->
+
+							<tr>
+									
+								<td><div style="text-align:center;">o</div><button id = "button" onclick="displayButton()">o</button></td>
+								<td><div style="text-align:center;">o</div><button id = "button" onclick="displayButton()">&#x221A;&#xb7;</button></td>
+								<td><div style="text-align:center;">x</div><button id = "button" onclick="displayButton()">x<sup>2</sup></button></td>
+								<td><div style="text-align:center;">x</div><button id = "button" onclick="displayButton()">x<sup>&#x033B;</sup></button></td>
+								<td><div style="text-align:center;">log</div><button id = "button" onclick="displayButton('log')">log</button></td>
+								<td><div style="text-align:center;">In</div><button id = "button" onclick="displayButton()">In</button></td>
+								
+							
+							</tr>
+
+							<tr>
+								<td><div style="text-align:center;">(-)</div><button id = "button" onclick="displayButton('-')">(-)</button></td>
+								<td><div style="text-align:center;">o,,,</div><button id = "button" onclick="displayButton('o,,,')"><sup>o</sup>&#x275C;&#x275C;&#x275C;</button></td>
+								<td><div style="text-align:center;">hyp</div><button id = "button" onclick="displayButton('hyp')">hyp</button></td>
+								<td><div style="text-align:center;">sin</div><button id = "button" onclick="displayButton('sin')">sin</button></td>
+								<td><div style="text-align:center;">cos</div><button id = "button" onclick="displayButton('cos')">cos</button></td>
+								<td><div style="text-align:center;">tan</div><button id = "button" onclick="displayButton('tan')">tan</button></td>
+							
+							</tr>
+
+							<tr>
+								<td><div style="text-align:center;">RCL</div><button id = "button" onclick="displayButton()">RCL</button></td>
+								<td><div style="text-align:center;">ENG</div><button id = "button" onclick="displayButton()">ENG</button></td>
+								<td><div style="text-align:center;">(</div><button id = "button" onclick="displayButton()">(</button></td>
+								<td><div style="text-align:center;">)</div><button id = "button" onclick="displayButton()">)</button></td>
+								<td><div style="text-align:center;">SD</div><button id = "button" onclick="displayButton()">S&#x21d4;D</button></td>
+								<td><div style="text-align:center;">M+</div><button id = "button" onclick="displayButton()">M+</button></td>
+							
+							</tr>
+
+						
+						</table>
+
+						<table style="margin-left:10px;">
+							<tr class="secondButton">
+								<td><div style="text-align:center;">CONST</div><button id = "button2" onclick="displayButton(7)">7</button></td>
+								<td><div style="text-align:center;">CONV</div><button id = "button2" onclick="displayButton(8)">8</button></td>
+								<td><div style="text-align:center;">CLR</div><button id = "button2" onclick="displayButton(9)">9</button></td>
+								<td><div style="text-align:center;">INS</div><button class="redButton" id = "ins" onclick="displayButton()">DEL</button></td>
+								<td><div style="text-align:center;">OFF</div><button id = "off" onclick="clr()">AC</button></td>	
+							</tr>
+
+							<tr class="secondButton">
+								<td><div style="text-align:center;">RCL</div><button id = "button2" onclick="displayButton('4')">4</button></td>
+								<td><div style="text-align:center;">ENG</div><button id = "button2" onclick="displayButton('5')">5</button></td>
+								<td><div style="text-align:center;">(</div><button id = "button2" onclick="displayButton('6')">6</button></td>
+								<td><div style="text-align:center;">)</div><button id = "button2" onclick="displayButton('&#xd7;')">&#xd7;<!-- multiplication --></button></td>
+								<td><div style="text-align:center;">SD</div><button id = "button2" onclick="displayButton('&#xf7;')">&#xf7;<!-- division --></button></td>	
+							</tr>
+
+							<tr class="secondButton">
+								<td><div style="text-align:center;">RCL</div><button id = "button2" onclick="displayButton('1')">1</button></td>
+								<td><div style="text-align:center;">ENG</div><button id = "button2" onclick="displayButton(2)">2</button></td>
+								<td><div style="text-align:center;">BASE</div><button id = "button2" onclick="displayButton(3)">3</button></td>
+								<td><div style="text-align:center;">)</div><button id = "button2" onclick="displayButton('+')">&#x2b;<!-- plus --></button></td>
+								<td><div style="text-align:center;">Rec</div><button id = "button2" onclick="displayButton('&#x2212;')">&#x2212;<!-- minus --></button></td>	
+							</tr>
+
+							<tr class="secondButton">
+								<td><div style="text-align:center;">Rnd</div><button id = "button2" onclick="displayButton('0')">0</button></td>
+								<td><div style="text-align:center;">Rans</div><button id = "button2" onclick="displayButton('.')">.</button></td>
+								<td><div style="text-align:center;">e</div><button id = "button2" onclick="displayButton()">x10<sup style="font-size: 0.5em;">X</sup></button></td>
+								<td><div style="text-align:center;">DRG</div><button id = "button2" onclick="displayButton()">Ans</button></td>
+								<td><div style="text-align:center; color:rgb(193,194,199);">=</div><button id = "button2" onclick="equate()">=</button></td>	
+							</tr>	
+							
+						</table>
+		                
+					 </section>
+				
+			</section>
+
+
+		</section>
+
+		<script>
+
+			var contain = document.getElementById('screen').innerHTML;
+			function displayButton(x){
+				document.getElementById('screen').innerHTML += " " +  x;
+				console.log(x);
+				
+				
+			}
+
+			function clr(){
+			document.getElementById('screen').innerHTML =" ";
+			
+
+
+			}
+
+			function equate(){
+				 document.getElementById('screen').innerHTML = eval(document.getElementById('screen').innerHTML);
+				
+				
+			}
+			
+		
+		</script>
+
+		
+
+	
+
+	
+
+</body>
+</html>
